@@ -1,0 +1,318 @@
+/*__________________________variáveis__________________________*/
+
+:root{
+    /*------------Cores------------*/
+    --preto:#202020;
+    --preto-sombra:#0000000f;
+    --cinza:#909090;
+    --branco:#FFFFFF;
+    --amarelo:#FFCB47;
+    --amarelo-sombra:#FFCB473d;
+    --amarelo__destaque:#FDBF21;
+
+    /*------------Fonts------------*/
+    --font__geral: 'Montserrat',sans-serif;
+    --font__destaque: 'Elsie Swash Caps',serif;
+}
+
+/*__________________________base__________________________*/
+
+body{
+    background-image:url(../img/fundo-textura.png), url(../img/fundo-linhas.svg);
+    background-position: center;
+    background-repeat:repeat;
+    color: var(--cinza);
+    font-family: var(--font__geral);
+    font-size: 1rem;
+}
+
+main{
+    line-height: 26px;
+}
+
+
+/*__________________________componentes__________________________*/
+/*------------titulo------------*/
+.tituloComposto{
+    font-size: 1.375rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.titulo--destaque{
+    color: var(--preto);
+    font-family: var(--font__destaque);
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 3rem;
+}
+
+/*------------botao------------*/
+.botao{
+    background: var(--amarelo);
+    border:none;
+    box-shadow: 10px 10px 30px var(--amarelo-sombra);
+    color: var(--branco);
+    cursor: pointer;
+    font-family:inherit;
+    font-weight:700;
+    padding: 1rem 0;
+    text-align: center;
+    transition: all .5s;
+    width: 100%;
+}
+
+.botao:hover{
+    background: var(--amarelo__destaque);
+}
+
+.botao--alternativo{
+    background: unset;
+    border: 1px solid var(--amarelo);
+    color:var(--amarelo);
+}
+
+/*__________________________cabecalho__________________________*/
+
+header{
+    display:flex;
+    justify-content:space-between;
+    margin: .75rem 1rem 2rem 1rem; 
+}
+
+.cabecalho__carrinho{
+    background:none;
+    border:none;
+    cursor: pointer;
+}
+
+/*__________________________chamada__________________________*/
+
+.chamada{
+    background-image: url(../img/splash-chamada.svg);
+    background-position: top -4rem right;
+    background-repeat: no-repeat;
+    padding: 1rem 1rem 2.5rem;
+    position: relative;
+}
+
+.chamada__titulo{
+    text-align: left;
+}
+
+.chamada__info{
+    align-items: center;
+    display:flex;
+    flex-direction:row;
+}
+
+/*------------inscricao------------*/
+.input__ico--mail{
+    background-image: url(../img/ico/mail.svg);
+    background-position: left 1.75rem center;
+    background-repeat: no-repeat;
+}
+
+.insricao__email{
+    background-color: var(--branco);
+    border:none;
+    box-shadow: 10px 10px 30px var(--preto-sombra);
+    box-sizing: border-box;
+    color: initial;
+    font-family: var(--font__geral);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding:1.75rem 1.75rem 1.75rem 4.75rem;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+/*__________________________passos__________________________*/
+
+.passos{
+    background: var(--branco);
+    box-shadow: 10px 10px 30px var(--preto-sombra);
+    box-sizing: border-box;
+    margin:0 1rem;
+    padding:2rem;
+}
+
+.passos__lista{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.passo{
+    align-items:center;
+    display:flex;
+    margin-bottom: 1rem;
+    width:15rem;
+}
+
+.passo__figura{
+    background: var(--amarelo);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 1.375rem;
+    border-radius:50%;
+    display:block;
+    height:3.25rem;
+    margin-right: 1rem;
+    width:3.25rem;
+}
+
+.passo__figura--1{
+    background-image: url(../img/ico/mouse.svg);
+}
+
+.passo__figura--2{
+    background-image: url(../img/ico/cart.svg);
+}
+
+.passo__figura--3{
+    background-image: url(../img/ico/truck.svg);
+}
+
+/*__________________________produtos__________________________*/
+
+.produtos{
+    margin: 3rem 0;
+}
+
+.produto{
+    background-color:var(--branco);
+    box-shadow: 10px 10px 30px var(--preto-sombra);
+    box-sizing: border-box;
+    margin:1rem;
+    min-height:12.5rem;
+    overflow: hidden;
+    padding: 2rem 0 2rem 50%;
+    position:relative;
+}
+
+.produto__imagem{
+    left:-8rem;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:18.75rem;
+    z-index: 1;
+}
+
+.produto__info{
+    position:relative;
+    z-index: 2;
+}
+
+.produto__nome{
+    margin-top:0;
+    margin-bottom:.5rem;
+}
+
+.produto__preco{
+    margin-bottom: 1.5rem;
+}
+
+/*------------botaoConfirmacao------------*/
+.confirmacao__botao{
+    align-items: center;
+    border:none;
+    background-color:var(--branco);
+    color:var(--amarelo);
+    display: flex;
+}
+
+.confirmacao__ico{
+    background-image: url(../img/ico/seta.svg);
+    background-size: contain;
+    display:inline-block;
+    height:.875rem;
+    margin-left: 1.75rem;
+    width:.875rem;
+}
+
+/*__________________________videos__________________________*/
+
+.videos{
+    margin: 2.5rem 1rem;
+}
+
+.video{
+    margin: 2rem 1rem;
+}
+
+.video__video{
+    margin-bottom: .5rem;
+    max-height: 17.5rem;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.video__video::before{
+    background-color:var(--branco);
+    background-image:url(../img/ico/play.svg);
+    background-position:center left 55%;
+    background-repeat:no-repeat;
+    background-size:1.75rem;
+    border-radius:50%;
+    content:'';
+    display:block;
+    height:4.875rem;
+    left: 50%;
+    position:absolute;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:4.875rem;
+}
+
+.video__titulo{
+    color:var(--preto);
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+/*__________________________rodape__________________________*/
+
+.rodape{
+    padding:1.5rem 0 2.5rem 1rem;
+    background-color:var(--branco);
+    background-image:url(../img/splash-rodape.svg);
+    background-position: top -11rem right;
+    background-repeat: no-repeat;
+}
+
+.rodape__logo{
+    max-width: 11.125rem;
+    margin-bottom: 1.125rem;
+}
+
+.rodape__aplicativos{
+    display:flex;
+    margin-bottom: 2rem;
+}
+
+.aplicativo__ico{
+    display: inline-block;
+    width:1.625rem;
+    height:1.625rem;
+    margin-right: 1.625rem;
+}
+
+.unidade{
+    margin-bottom: 2rem;
+    line-height:1.5rem;
+}
+
+.unidade__titulo{
+    color:var(--preto);
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    display:block;
+    margin-bottom: .5rem;
+}
